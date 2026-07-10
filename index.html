@@ -1,23 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>문서 예시</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex; /* 좌우 배치 */
+    }
+    nav {
+      width: 250px; /* 왼쪽 목차 영역 */
+      background-color: #f4f4f4;
+      padding: 20px;
+      height: 100vh; /* 화면 전체 높이 */
+      position: fixed; /* 스크롤해도 고정 */
+      overflow-y: auto; /* 내용 많으면 스크롤 */
+    }
+    main {
+      margin-left: 270px; /* nav 너비만큼 오른쪽으로 밀기 */
+      padding: 20px;
+      flex: 1;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+    nav ul li a:hover {
+      color: #007acc;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="pages/about.html">About</a>
-      <a href="pages/contact.html">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <h2>목차</h2>
+    <ul>
+      <li><a href="#section1">동기</a></li>
+      <li><a href="#section2">문제 정의</a></li>
+      <li><a href="#section3">해결 방법</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <p>This is the home page.</p>
+    <h1>프로젝트 문서</h1>
+    <section id="section1">
+      <h2>동기</h2>
+      <p>이 프로젝트를 시작하게 된 이유는...</p>
+    </section>
+
+    <section id="section2">
+      <h2>문제 정의</h2>
+      <p>우리가 직면한 문제는...</p>
+    </section>
+
+    <section id="section3">
+      <h2>해결 방법</h2>
+      <p>이를 해결하기 위해 우리는...</p>
+    </section>
   </main>
-  <script src="js/scripts.js"></script>
 </body>
 </html>
